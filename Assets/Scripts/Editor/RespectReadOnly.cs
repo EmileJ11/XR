@@ -1,28 +1,3 @@
-// Put this into your Assets folder
-// The best place is to put it in a Scripts/ Editor Scripts folder
-
-using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-
-public class NotifyForLockedFiles : UnityEditor.AssetModificationProcessor
-{
-    public static string[] OnWillSaveAssets(string[] paths)
-    {
-        List<string> pathsToSave = new List<string>();
-
-        for (int i = 0; i < paths.Length; ++i)
-        {
-            FileInfo info = new FileInfo(paths[i]);
-            if (info.IsReadOnly)
-                UnityEditor.EditorUtility.DisplayDialog("File locked",
-                paths[i] + " is locked by Anchorpoint to prevent conflicts.",
-                "Ok");
-            else
-                pathsToSave.Add(paths[i]);
-        }
-
-        return pathsToSave.ToArray();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:86a3a7aaf094a2b1e3e35066fcacae5cd39b8f12bb00fef3badae2ad2dac3257
+size 831
