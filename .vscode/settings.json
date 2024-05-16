@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "XR_git_last.sln"
+    "dotnet.defaultSolution": "XR_shared.sln"
 }
